@@ -391,10 +391,6 @@
         
           
             <p><strong>sleep是一个静态方法</strong><br>在这里必须强调一下：<strong>sleep</strong>是一个静态方法<br><strong>sleep</strong>()方法的作用，应该是让当前线程挂起。<br>也就是<strong>Thread.sleep()</strong>方法会让<strong>Thread.currentThread</strong>这个线程挂到指定时间</p>
-<ul>
-<li>package com.sixsix.six;</li>
-</ul>
-<p>public class Tmei extends Thread {<br>    public static void main(String[]args){<br>        int a = (int)(100<em>Math.random());//随机生成<br>        int b = (int )(100</em>Math.random());//随机生成另一个<br>        System.out.println(“请在7秒中计算出下面两个整数的和：”+a+”+”+b);<br>        try {<br>            Thread.sleep(7000);<br>        }catch (InterruptedException e ){<br>            System.out.println(“对不起你的程序出现了错误信息，请看：”+e.getMessage());<br>//抛出异常信息<br>        }<br>        int mei = a+b;<br>        System.out.println(mei);<br>    }<br>}</p>
 
           
         
