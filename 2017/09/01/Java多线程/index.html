@@ -94,17 +94,17 @@
 
 
 
-<meta name="description" content="`package com.sixsix.six; public class TestAddingInMain {    public static void main(String[]args){        int a = (int ) (100Math.random());        //生成一个0-100的随机数        int b = (int )(100Math.random">
+<meta name="description" content="sleep是一个静态方法在这里必须强调一下：sleep是一个静态方法sleep()方法的作用，应该是让当前线程挂起。也就是Thread.sleep()方法会让Thread.currentThread这个线程挂到指定时间  package com.sixsix.six;  public class Tmei extends Thread {    public static void main(St">
 <meta name="keywords" content="多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java多线程">
 <meta property="og:url" content="http://inim.xyz/2017/09/01/Java多线程/index.html">
 <meta property="og:site_name" content="封茗">
-<meta property="og:description" content="`package com.sixsix.six; public class TestAddingInMain {    public static void main(String[]args){        int a = (int ) (100Math.random());        //生成一个0-100的随机数        int b = (int )(100Math.random">
-<meta property="og:updated_time" content="2017-09-02T04:48:31.797Z">
+<meta property="og:description" content="sleep是一个静态方法在这里必须强调一下：sleep是一个静态方法sleep()方法的作用，应该是让当前线程挂起。也就是Thread.sleep()方法会让Thread.currentThread这个线程挂到指定时间  package com.sixsix.six;  public class Tmei extends Thread {    public static void main(St">
+<meta property="og:updated_time" content="2017-09-02T08:33:12.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java多线程">
-<meta name="twitter:description" content="`package com.sixsix.six; public class TestAddingInMain {    public static void main(String[]args){        int a = (int ) (100Math.random());        //生成一个0-100的随机数        int b = (int )(100Math.random">
+<meta name="twitter:description" content="sleep是一个静态方法在这里必须强调一下：sleep是一个静态方法sleep()方法的作用，应该是让当前线程挂起。也就是Thread.sleep()方法会让Thread.currentThread这个线程挂到指定时间  package com.sixsix.six;  public class Tmei extends Thread {    public static void main(St">
 
 
 
@@ -386,19 +386,11 @@
       
 
       
-        <pre><code>`package com.sixsix.six;
-</code></pre><p>public class TestAddingInMain {<br>    public static void main(String[]args){<br>        int a = (int ) (100<em>Math.random());<br>        //生成一个0-100的随机数<br>        int b = (int )(100</em>Math.random());<br>        //生成另外一个0-100的数<br>        System.out.println(“请在五秒钟计算出下面两个整数的合：”+a+”+”+b);<br>        try {<br>            Thread.sleep(5000);<br>            //让线程挂起5秒</p>
-<pre><code>    }catch (InterruptedException e){
-        //输出异常信息
-
-        System.out.println(&quot;对不起你的程序出现了异常，错误信息&quot;+e.getMessage());
-
-    }
-    int result = a+b;
-    System.out.println(a+&quot;+&quot;+b+&quot;运算结果是：&quot;+result);
-    //输出运算结果
-}
-</code></pre><p>}<br>`</p>
+        <p><strong>sleep是一个静态方法</strong><br>在这里必须强调一下：<strong>sleep</strong>是一个静态方法<br><strong>sleep</strong>()方法的作用，应该是让当前线程挂起。<br>也就是<strong>Thread.sleep()</strong>方法会让<strong>Thread.currentThread</strong>这个线程挂到指定时间</p>
+<ul>
+<li>package com.sixsix.six;</li>
+</ul>
+<p>public class Tmei extends Thread {<br>    public static void main(String[]args){<br>        int a = (int)(100<em>Math.random());//随机生成<br>        int b = (int )(100</em>Math.random());//随机生成另一个<br>        System.out.println(“请在7秒中计算出下面两个整数的和：”+a+”+”+b);<br>        try {<br>            Thread.sleep(7000);<br>        }catch (InterruptedException e ){<br>            System.out.println(“对不起你的程序出现了错误信息，请看：”+e.getMessage());<br>//抛出异常信息<br>        }<br>        int mei = a+b;<br>        System.out.println(mei);<br>    }<br>}</p>
 
       
     </div>
